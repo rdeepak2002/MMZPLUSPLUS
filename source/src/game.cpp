@@ -50,8 +50,19 @@ void Game::gameLoop() {
                 input.keyUpEvent(event);
             }
             if(event.type == SDL_QUIT) {
+                SDL_Quit();
                 return;
             }
+        }
+        if(input.wasKeyPressed(SDL_SCANCODE_Q) == true) {
+            SDL_Quit();
+            return;
+        }
+        if(input.wasKeyPressed(SDL_SCANCODE_F) == true) {
+            graphics.toggleFullScreenMode();
+        }
+        if(input.wasKeyPressed(SDL_SCANCODE_ESCAPE) == true) {
+            graphics.toggleWindowedMode();
         }
 
         const int CURRENT_TIME_MS = SDL_GetTicks();

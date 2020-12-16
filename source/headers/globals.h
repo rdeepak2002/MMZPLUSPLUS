@@ -6,6 +6,8 @@
 #define MZPLUSPLUS_GLOBALS_H
 
 namespace globals {
+    const bool FULLSCREEN = true;
+
     const float SCREEN_SCALE = 0.5f;
 
     const int SCREEN_WIDTH = 1920*SCREEN_SCALE;

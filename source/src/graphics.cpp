@@ -16,6 +16,13 @@
 Graphics::Graphics() {
     SDL_CreateWindowAndRenderer(globals::SCREEN_WIDTH, globals::SCREEN_HEIGHT, 0, &this->_window, &this->_renderer);
     SDL_SetWindowTitle(this->_window, "MMZ++");
+    SDL_ShowCursor(0);
+    if(globals::FULLSCREEN) {
+        toggleFullScreenMode();
+    }
+    else {
+        toggleWindowedMode();
+    }
 }
 
 Graphics::~Graphics() {
@@ -43,4 +50,13 @@ void Graphics::clear() {
 
 SDL_Renderer* Graphics::getRenderer() const {
     return this->_renderer;
+}
+
+void Graphics::toggleWindowedMode() {
+    SDL_SetWindowFullscreen(this->_window, 0);
+    SDL_SetWindowSize(this->_window, globals::SCREEN_WIDTH, globals::SCREEN_HEIGHT);
+}
+
+void Graphics::toggleFullScreenMode() {
+    SDL_SetWindowFullscreen(this->_window, 1);
 }

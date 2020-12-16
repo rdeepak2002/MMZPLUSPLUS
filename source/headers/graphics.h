@@ -72,11 +72,25 @@ public:
     /**
      * getRenderer
      *
-     * This function returns the renderer
+     * This function returns the renderer.
      *
      * @return the renderer
      */
     SDL_Renderer* getRenderer() const;
+
+    /**
+     * toggleWindowedMode
+     *
+     * This function makes the application go into windows mode.
+     */
+    void toggleWindowedMode();
+
+    /**
+     * toggleFullScreenMode
+     *
+     * This function makes the application go into fullscreen mode.
+     */
+     void toggleFullScreenMode();
 private:
     SDL_Window* _window;
     SDL_Renderer* _renderer;
