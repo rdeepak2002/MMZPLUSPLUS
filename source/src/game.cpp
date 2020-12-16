@@ -18,24 +18,15 @@ namespace {
     const int MAX_FRAME_TIME = 1000/FPS;
 }
 
-/**
- * This constructor initializes SDL and calls the initial gameLoop call.
- */
 Game::Game() {
     SDL_Init(SDL_INIT_EVERYTHING);
     this->gameLoop();
 }
 
-/**
- * This deconstructor does nothing.
- */
 Game::~Game() {
 
 }
 
-/**
- * This function contains the gameLoop logic (events that repeat).
- */
 void Game::gameLoop() {
     Graphics graphics;
     Input input;
@@ -68,18 +59,10 @@ void Game::gameLoop() {
     }
 }
 
-/**
- * This function manages drawing graphics.
- * @param graphics the graphics object that allows for drawing
- */
 void Game::draw(Graphics &graphics) {
 
 }
 
-/**
- * This function is called every frame.
- * @param elapsedTime the time that elapsed since the last frame
- */
 void Game::update(float elapsedTime) {
 
 }
