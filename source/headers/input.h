@@ -16,38 +16,55 @@
 class Input {
 public:
     /**
+     * beginNewFrame
+     *
      * This function gets called at the beginning of each new frame to reset the keys that are no longer relevant.
      */
     void beginNewFrame();
 
     /**
+     * keyUpEvent
+     *
      * This function gets called when a key is released.
+     *
      * @param event the SDL event that occurred
      */
     void keyUpEvent(const SDL_Event &event);
 
     /**
+     * keyDownEvent
+     *
      * This function gets called when a key has been pressed.
+     *
      * @param event the SDL event that occurred
      */
     void keyDownEvent(const SDL_Event& event);
 
     /**
+     * wasKeyPressed
+     *
      * This function checks if a certain key was pressed during the current frame.
+     *
      * @param key the key to check if pressed
      * @return true if the key was pressed
      */
     bool wasKeyPressed(SDL_Scancode key);
 
     /**
+     * wasKeyReleased
+     *
      * This function checks if a certain key was released during the current frame.
+     *
      * @param key the key to check if released
      * @return true if the key was released
      */
     bool wasKeyReleased(SDL_Scancode key);
 
     /**
+     * isKeyHeld
+     *
      * This function checks if a certain key is being held during the current frame.
+     *
      * @param key the key to check if it is currently being held
      * @return true if the key is currently being held
      */
