@@ -10,6 +10,8 @@
  * This class holds all our information for our main game loop
  */
 
+#include "sprite.h"
+
 class Graphics;
 
 class Game {
@@ -52,6 +54,8 @@ private:
      * @param elapsedTime the time that elapsed since the last frame
      */
     void update(float elapsedTime);
+
+    Sprite _player;
 };
 
 #endif //MZPLUSPLUS_GAME_H
